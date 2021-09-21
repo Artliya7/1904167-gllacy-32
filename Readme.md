@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Yuliia Artiukhova](https://up.htmlacademy.ru/htmlcss/32/user/1904167).
-* Наставник: `Неизвестно`.
+* Наставник: [Татьяна Симоненко] (https://htmlacademy.ru/profile/tatien).
 
 ---
 
