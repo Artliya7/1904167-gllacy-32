@@ -70,25 +70,23 @@
     		<form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
     			<fieldset class="catalog-filter-group">
     				<legend class="catalog-filter-title">Сортировка:</legend>
-    				<form class="sorting-type">
+    				<div class="sorting-type">
     					<select class="select-control" id="sorting" name="sorting">
     						<option value="popular">по популярности</option>
     					</select>
     					<button class="visually-hidden" type="submit">Отсортировать продукты</button>
+            </div>
     			</fieldset>
     			<fieldset class="catalog-filter-group">
     				<legend class="catalog-filter-title">Цена: 100 ₽ – 500 ₽</legend>
     				<label class="catalog-filter-label">
     					<input class="catalog-filter-input" type="number" name="min-price">
+              <span class="visually-hidden">Изменить минимальную цену</span>
     				</label>
     				<label class="catalog-filter-label">
     					<input class="catalog-filter-input" type="number" name="max-price">
-    				<button class="range-toggle toggle-min" type="button">
-    					<span class="visually-hidden">Изменить минимальную цену</span>
-    				</button>
-    				<button class="range-toggle toggle-max" type="button">
     					<span class="visually-hidden">Изменить максимальную цену</span>
-    				</button>
+            </label>
     			</fieldset>
     			<fieldset class="catalog-filter-group">
     				<legend class="catalog-filter-title">Жирность:</legend>
@@ -163,8 +161,6 @@
     						</li>
     					</ul>
     			</fieldset>
-
-
     			<button class="button" type="submit">Применить</button>
     		</form>
     	</section>
@@ -310,6 +306,7 @@
           </li>
         </ul>
       </section>
+    </main>
 
      <footer class="main-footer">
       <section class="footer-social-media">
