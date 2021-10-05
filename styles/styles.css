@@ -1,0 +1,64 @@
+@font-face {
+	font-family: inter;	
+	font-size: normal;
+	font-weight: 400;
+	src: url("fonts/inter-regular.woff2") format("woff2");
+	font-display: swap;
+	}
+
+@font-face {
+	font-family: inter;	
+	font-size: normal;
+	font-weight: 700;
+	src: url("fonts/inter-bold.woff2") format("woff2");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: inter;	
+	font-size: normal;
+	font-weight: 900;
+	src: url("fonts/inter-black.woff2") format("woff2");
+	font-display: swap;
+}
+
+body {
+	background: #FEAFC3;
+}
+
+.bonuses-item {
+	background: #FF7799;
+	border-radius: 16px;
+}
+
+.advantages {
+	background-image: url("../images/waffle-background2.png");
+	width: 1170px;
+	height: 480px;
+	border-radius: 16px;
+}
+
+.news {
+	background-image: url("../images/article-background.jpg");
+	width: 570px;
+	height: 216px;
+	border-radius: 16px;
+}
+
+.subscription {
+	background-image: url("../images/subscription-background.png");
+	width: 570px;
+	height: 220px;
+}
+.delivery-background {
+	background-image: url("../images/delivery-background.jpg");
+	width: 1170px;
+	height: 534px;
+	border-radius: 16px;
+}
+.contacts {
+	background-image: url("../images/address-background.jpg");
+	width: 1170px;
+	height: 492px;
+	border-radius: 16px;
+}
