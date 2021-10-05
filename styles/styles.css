@@ -32,32 +32,32 @@ body {
 }
 
 .advantages {
-	background-image: url("../images/waffle-background2.png");
+	background-image: url("../images/background-waffle.jpg");
 	width: 1170px;
 	height: 480px;
 	border-radius: 16px;
 }
 
 .news {
-	background-image: url("../images/article-background.jpg");
+	background-image: url("../images/background-article.jpg");
 	width: 570px;
 	height: 216px;
 	border-radius: 16px;
 }
 
 .subscription {
-	background-image: url("../images/subscription-background.png");
+	background-image: url("../images/background-subscription.jpg");
 	width: 570px;
 	height: 220px;
 }
 .delivery-background {
-	background-image: url("../images/delivery-background.jpg");
+	background-image: url("../images/background-delivery.jpg");
 	width: 1170px;
 	height: 534px;
 	border-radius: 16px;
 }
 .contacts {
-	background-image: url("../images/address-background.jpg");
+	background-image: url("../images/background-address.jpg");
 	width: 1170px;
 	height: 492px;
 	border-radius: 16px;
