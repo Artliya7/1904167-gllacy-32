@@ -22,7 +22,8 @@
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
-            <a class="navigation-link" href="tel:+78005558628">+7 800 555-86-28</a>
+            <a class="navigation-link" href="tel:+78005558628"><span class="telephone">+7 800 555-86-28</span>
+            </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
@@ -33,16 +34,14 @@
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden">
               Вход
-              </span>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">
               Корзина
-              </span>
+              </span> Пусто
             </a>
           </li>
         </ul>
@@ -117,14 +116,14 @@
             <h4 class="bonuses-item-title">Малинка даром!</h4>
             <p class="bonuses-item-description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
             </p>  
-            <a class="button button-gift1" href="#" >Хочу подарок</a>
+            <a class="button button-gift-1" href="#" >Хочу подарок</a>
             <img class="content-image1" src="images/cone-raspberry.png" width="181" height="284" alt="Фото рожка мороженого с малиной">
           </li>
           <li class="bonuses-item">
             <h4 class="bonuses-item-title">Маршмеллоу даром!</h4>
             <p class="bonuses-item-description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.
             </p>  
-            <a class="button button-gift2" href="#" >Хочу подарок</a>
+            <a class="button button-gift-2" href="#" >Хочу подарок</a>
             <img class="content-image2" src="images/cone-marshmallow.png" width="232" height="359" alt="Фото рожка мороженого с зефиром">
           </li>
         </ul>
@@ -132,7 +131,7 @@
 
       <section class="flavours">
         <h2 class="visually-hidden">Товары</h2>
-        <h3 class="popular-flavours">Попробуйте самые популярные вкусы нашего мороженого</h3>
+        <h3 class="flavours-title">Попробуйте самые популярные вкусы нашего мороженого</h3>
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
@@ -141,7 +140,9 @@
                 <p class="product-card-description">Сливочное мороженое с малиновым джемом</p>
             </a>
             <b class="product-card-price">310 ₽/кг</b>
-            <button class="product-card-button button">Корзина</button>
+            <button class="product-card-button button">
+              <span class="visually-hidden">Корзина</span>
+            </button>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
@@ -150,7 +151,9 @@
                 <p class="product-card-description">Фисташковый пломбир с кусочками шоколада</p>
             </a>
             <b class="product-card-price">340 ₽/кг</b>
-            <button class="product-card-button button">Корзина</button>
+            <button class="product-card-button button">
+              <span class="visually-hidden">Корзина</span>
+            </button>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
@@ -159,7 +162,9 @@
                 <p class="product-card-description">Крем-брюле с черничным джемом</p>
             </a>
             <b class="product-card-price">330 ₽/кг</b>
-            <button class="product-card-button button">Корзина</button>
+            <button class="product-card-button button">
+               <span class="visually-hidden">Корзина</span>
+            </button>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
@@ -168,7 +173,9 @@
                 <p class="product-card-description">Ванильный пломбир со сладкой посыпкой</p>
             </a>
             <b class="product-card-price">320 ₽/кг</b>
-            <button class="product-card-button button">Корзина</button>
+            <button class="product-card-button button">
+              <span class="visually-hidden">Корзина</span>
+            </button>
           </li>
         </ul>
       </section>
@@ -241,7 +248,7 @@
         <p class="delivery-text">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
         
         <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="delivery-form-day">
+        <div class="delivery-form-day">
           <span class="form-label form-label-icon">
             <label for="delivery-day">Дата</label>
             <button class="info" type="button">
@@ -251,7 +258,8 @@
           <input type="text" id="delivery-day" name="delivery-day" placeholder="01.04.2020">
         </div>
         <div class="delivery-form-tel">
-            <label for="delivery-tel">Телефон</label>
+          <span class="form-label">
+            <label for="delivery-tel">Телефон</label></span>
             <input type="text" id="delivery-tel" name="delivery-tel" placeholder="+7 800 999-00-00">
         </div>
         <div class="delivery-form-address">
@@ -263,7 +271,7 @@
           </span>
           <input type="text" id="delivery-address" name="delivery-address" placeholder="Ул. Большая Конющенная, 19/8">
         </div>
-        <button class="button" type="submit">Отправить
+        <button class="button-delivery-form" type="submit">Отправить
         </button>
         </form> 
       </section>
@@ -309,7 +317,9 @@
         <h2 class="visually-hidden">Дополнительная информация о магазине Глэйси</h2>
         <ul class="footer-additional-info-list">
           <li class="footer-additional-info-item">
-            <a class="additional-info-link" href="">Для поставщиков</a>
+            <a class="additional-info-link" href="">
+              <b>Для поставщиков</b>
+            </a>
           </li>
           <li class="footer-additional-info-item">
             <a class="additional-info-link" href="">О производстве</a>
@@ -329,7 +339,7 @@
           <img class="footer-logo" src="images/logo-htmlacademy.svg" width="93" height="27" alt="Логотип html.academy">
         </a>
         <p class="about-text">Сделано в
-          <a class="htmlacademy-link" href="https://htmlacademy.ru/"> .html academy © 2021</a>
+          <a class="htmlacademy-link" href="https://htmlacademy.ru/"> .html academy</a> © 2021
         </p>
       </section>
 
