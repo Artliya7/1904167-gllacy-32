@@ -48,7 +48,7 @@
 
       </nav>
     </header>
-    <main class="main-index">
+    <main class="main-container main-index">
       <h1 class="visually-hidden">Магазин Глэйси</h1>
 
       <section class="description">
@@ -182,39 +182,45 @@
 
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
-        <h3 class="advantages-title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
-        <ul class="advantages-list">
-          <li class="advantages-item">
-            <p class="advantages-description">
-             <img src="images/icons/icon-ice-cream.svg" width="48" height="48" alt="Иконка мороженого">
-            </p>
-            <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-            </p>  
-          </li>
-          <li class="advantages-item">
-            <p class="advantages-description">
-             <img src="images/icons/icon-leaf.svg" width="48" height="48" alt="Иконка листик">
-            </p>
-            <p>Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.
-            </p>  
-          </li>
-          <li class="advantages-item">
-            <p class="advantages-description">
-             <img src="images/icons/icon-cow.svg" width="48" height="48" alt="Иконка коровка">
-            </p>
-            <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.
-            </p>  
-          </li>
-          <li class="advantages-item">
-            <p class="advantages-description">
-             <img src="images/icons/icon-thermometer.svg" width="48" height="48" alt="Иконка градусник">
-            </p>
-            <p>Доставка нашего мороженого осуществляется в специальном термопаке, который не дает мороженому растаять и позволяет сохранить превосходный вкус.
-            </p>  
-          </li>
-        </ul>
+        <div class="advantages-background">
+          <h3 class="advantages-title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
+          <ul class="advantages-list">
+            <div class="advantages-list-group-1">
+              <li class="advantages-item">
+                <p class="advantages-description">
+                 <img src="images/icons/icon-ice-cream.svg" width="48" height="48" alt="Иконка мороженого">
+                </p>
+                <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                </p>  
+              </li>
+              <li class="advantages-item">
+                <p class="advantages-description">
+                 <img src="images/icons/icon-cow.svg" width="48" height="48" alt="Иконка коровка">
+                </p>
+                <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.
+                </p>  
+              </li>
+            </div>
+            <div class="advantages-list-group-2">
+              <li class="advantages-item">
+                <p class="advantages-description">
+                 <img src="images/icons/icon-leaf.svg" width="48" height="48" alt="Иконка листик">
+                </p>
+                <p>Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.
+                </p>  
+              </li>
+              <li class="advantages-item">
+                <p class="advantages-description">
+                 <img src="images/icons/icon-thermometer.svg" width="48" height="48" alt="Иконка градусник">
+                </p>
+                <p>Доставка нашего мороженого осуществляется в специальном термопаке, который не дает мороженому растаять и позволяет сохранить превосходный вкус.
+                </p>  
+              </li>
+            </div>
+          </ul>
+        </div>
       </section>
-
+      <div class="columns-container">
       <article class="news">
         <h2 class="visually-hidden">Статья про сервировку фруктовых щербетов</h2>
         <a class="news-link" href="#">Новое в нашем блоге</a>
@@ -234,6 +240,7 @@
           <button class="button subscription-button" type="submit">Отправить</button>
         </form>
       </section>
+      </div>
 
       <div class="delivery-background">
       <section class="delivery">
@@ -243,7 +250,7 @@
       </p>  
       </section>
 
-      <section>
+      <section class="delivery-order">
         <h2 class="visually-hidden">Оформить доставку</h2>
         <p class="delivery-text">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
         
@@ -285,13 +292,15 @@
         <p>Для заказов по телефону:</p>
         <b>+7 (812) 812-12-12</b>
         <p>(с 10 до 20 ежедневно)</p>
-        </address>
         <a class="button button-feedback" href="#">Форма обратной связи</a>
+        </address>
+        
       </section>
       
     </main>
 
     <footer class="main-footer">
+      <div class="main-footer-container">
       <section class="footer-social-media">
         <h2 class="visually-hidden">Магазин Глэйси в социальных сетях</h2>
         <ul class="footer-social-media-list">
@@ -342,10 +351,8 @@
           <a class="htmlacademy-link" href="https://htmlacademy.ru/"> .html academy</a> © 2021
         </p>
       </section>
-
+      </div
     </footer>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
 
   </body>
 </html>
