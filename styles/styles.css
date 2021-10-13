@@ -2,7 +2,7 @@
 	font-family: inter;	
 	font-size: normal;
 	font-weight: 400;
-	src: url("../fonts/inter-regular.woff2") format("woff2");
+	src: url("../fonts/inter-400.woff2") format("woff2");
 	font-display: swap;
 	}
 
@@ -10,7 +10,7 @@
 	font-family: inter;	
 	font-size: normal;
 	font-weight: 700;
-	src: url("../fonts/inter-bold.woff2") format("woff2");
+	src: url("../fonts/inter-700.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -18,7 +18,7 @@
 	font-family: inter;	
 	font-size: normal;
 	font-weight: 900;
-	src: url("../fonts/inter-black.woff2") format("woff2");
+	src: url("../fonts/inter-900.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -51,6 +51,16 @@ body {
 
 li {
 	list-style-type: none;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	overflow: 0;
+	clip: rect(0, 0, 0, 0);
 }
 
 .navigation {
@@ -96,6 +106,16 @@ li {
 	margin: 0 auto;
 }
 
+.first-page-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.description {
+	width: 470px;
+	margin-left: 70px;
+}
+
 .description-title {
 	font-weight: 900;
 	font-size: 36px;
@@ -136,12 +156,25 @@ li {
 	justify-content: space-between;
 	margin: 0;
 	padding: 0;
-
+	height: 268px;
 }
 
-.bonuses-item {
+.bonuses-item-1 {
 	width: 570px;
 	background: #FF7799;
+	background-image: url(../images/cone-raspberry.png);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	border-radius: 16px;
+	padding-left: 40px;
+}
+
+.bonuses-item-2 {
+	width: 570px;
+	background: #FF7799;
+	background-image: url(../images/cone-marshmallow.png);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
 	border-radius: 16px;
 	padding-left: 40px;
 }
@@ -210,16 +243,12 @@ li {
 .advantages-list {
 	margin: 0;
 	padding: 0 40px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.advantages-list-group-1 {
-	display: flex;
-	justify-content: space-between;
-}
-
-.advantages-list-group-2 {
-	display: flex;
-	justify-content: space-between;
+.advantages-item {
+	width: 500px;
 }
 
 .columns-container {
@@ -232,7 +261,7 @@ li {
 	width: 570px;
 	height: 216px;
 	border-radius: 16px;
-	padding-left: 32px;
+	
 }
 
 .news-link {
@@ -254,7 +283,6 @@ li {
 	width: 570px;
 	height: 220px;
 	border-radius: 16px;
-	padding-left: 26px;
 }
 .subscription-button, .button-delivery-form, .button-feedback {
 	color: #FCFCFC;
@@ -336,7 +364,14 @@ li {
 	width: 360px;
 	margin: 0;
 	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
 }
+
+.footer-additional-info-item {
+
+}
+
 
 .additional-info-link {
 	text-decoration: none;
@@ -361,7 +396,11 @@ li {
 	color: #2D3440;
 }
 
-.main-inner
+.page-container {
+	flex-grow: 1;
+	width: 1170px;
+	margin: 0 auto;
+}
 
 .inner-header-title {
 	font-weight: 900;
@@ -380,16 +419,67 @@ li {
 	font-size: 14px;
 	line-height: 20px;
 	color: #2D3440;
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+	width: 250px;
 }
 
 .breadcrumbs-link {
   color: inherit;
 }
+
+.catalog-filter {
+	width: 807px;
+	margin-right: 461px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+}
+
 .catalog-filter-group {
 	font-size: 14px;
 	line-height: 20px;
 	color: #2D3440;
+	margin: 0;
+	padding: 0;
+	width: 200px;
 }
+
+.catalog-filter-list {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+}
+
+.product-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.pagination-show-more {
+	
+}
+
+.pagination {
+	display: flex;
+	justify-content: flex-end;
+	padding: 0;
+	margin: 0;
+}
+
+.pagination-item {
+	width: 24px;
+}
+
 .pagination-link {
   line-height: 20px;
 	color: #2D3440;
@@ -401,4 +491,10 @@ li {
 }
 .pagination-disabled {
   background-color: #2D3440;
+}
+
+.page-footer-container {
+	display: flex;
+	width: 1170px;
+	margin: 0 auto;
 }
