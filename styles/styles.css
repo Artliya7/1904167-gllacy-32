@@ -63,6 +63,10 @@ li {
 	list-style-type: none;
 }
 
+a {
+	text-decoration: none;
+}
+
 .navigation {
 	display: flex;
 	width: 1170px;
@@ -135,6 +139,7 @@ li {
 	font-size: 18px;
 	line-height: 24px;
 	color: #2D3440;
+	width: 415px;
 	margin-top: 0;
 	margin-bottom: 48px
 }
@@ -143,7 +148,7 @@ li {
 	color: #2D3440;
 	background-color: #FCFCFC;
 }
-.additional-container {
+.pagination-container {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 80px;
@@ -193,15 +198,24 @@ li {
 }
 
 .bonuses-title, .flavours-title, .advantages-title {
-	margin-top: 0;
-	margin-bottom: 56px;
 	font-weight: 900;
 	font-size: 32px;
 	line-height: 46px;
 	text-align: center;
 	color: #2D3440;
+	margin: 0 auto;
+  margin-bottom: 56px;
+}
+
+.bonuses-title {
+	width: 443px;
+  
 }
  
+.flavours-title {
+	width: 527px;
+}
+
 .bonuses-list {
 	display: flex;
 	justify-content: space-between;
@@ -219,6 +233,7 @@ li {
 	border-radius: 16px;
 	padding: 40px;
 	margin-right: 30px;
+	box-sizing: border-box;
 }
 
 .bonuses-item-2 {
@@ -229,6 +244,7 @@ li {
 	background-position: 100% 50%;
 	border-radius: 16px;
 	padding: 40px;
+	box-sizing: border-box;
 }
 
 .bonuses-item-title {
@@ -240,8 +256,16 @@ li {
 	margin-bottom: 16px;
 }
 
-.bonuses-item-description {
+.bonuses-item-description-1 {
 	color: #2D3440;
+	width: 322px;
+	margin: 0;
+	margin-bottom: 32px;
+}
+
+.bonuses-item-description-2 {
+	color: #2D3440;
+	width: 294px;
 	margin: 0;
 	margin-bottom: 32px;
 }
@@ -251,19 +275,37 @@ li {
 }
 
 .product-list {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+  grid-template-columns: repeat(4, 270px);
 	margin: 0;
 	padding: 0;
+	gap: 40px 30px; 
+	margin-bottom: 16px;
+}
+.product-card-wrapper {
+	background-color: #FCFCFC;
+	border-radius: 8px;;
 }
 
 .product-card {
 	width: 270px;
 	text-align: center;
+	display: grid;
+	grid-template-rows: 168px min-content min-content auto min-content 16px;
+	grid-template-columns: 40px 190px 40px; 
 }
-.product-card-image {
-	border-radius: 50%;
+
+.product-card-image-link {
+  grid-column: 1 / -1;
 }
+
+.product-card-title-link,
+.product-card-description-link,
+.product-card-price,
+.product-card-button {
+  grid-column: 2 / 3;
+}
+
 .product-card-title {
 	font-weight: 700;
 	font-size: 20px;
@@ -273,9 +315,6 @@ li {
 	margin-bottom: 8px;
 }
 
-.product-card-link {
-	text-decoration: none;
-}
 
 .product-card-description {
 	color: #565C66;
@@ -288,6 +327,7 @@ li {
 	font-size: 20px;
 	line-height: 24px;
 	color: #2D3440;
+	text-align: left;
 }
 .product-card-button {
 	background-color: #FF2F64;
@@ -295,45 +335,40 @@ li {
 
 .advantages {
 	background-image: url("../images/background-waffle.jpg");
-	width: 1170px;
+	padding: 24px;
 	border-radius: 16px;
 	margin-bottom: 80px;
+	box-sizing: border-box;
 }
 
-.advantages-background {
-	width: 1122px;
+.advantages-white-background {
 	background: #FCFCFC;
 	border-radius: 16px;
-	margin: 0 24px;
-}
-
-.advantages-title {
-
+	padding: 56px 40px;
+	box-sizing: border-box;
 }
 
 .advantages-list {
 	margin: 0;
-	padding: 0 40px;
-	display: flex;
-	flex-wrap: wrap;
+	padding: 0;
+	display: grid;
+  grid-template-columns: 506px 506px;
+  gap: 40px 31px;
 }
 
 .advantages-item {
-	width: 500px;
 	display: flex;
 	justify-content: space-between;
   margin: 0;
 }
 
-
-.advantages-icon, .advantages-description {
+.advantages-icon {
 	margin: 0;
+	margin-right: 16px;
 }
 
 .advantages-description {
-	margin-bottom: 40px;
-	padding-left: 16px;
-  padding-right: 31px;
+	margin: 0;
 }
 
 .columns-container {
@@ -347,21 +382,20 @@ li {
 	width: 570px;
 	height: 216px;
 	border-radius: 16px;
-	
+ 	padding: 32px 235px 63px 32px;
+  box-sizing: border-box;
 }
-
+	
 .news-link {
 	line-height: 20px;
 	color: #565C66;
 	text-decoration: none;
 	display: block;
-	padding: 32px 32px 12px;
+	margin-bottom: 12px;
 }
 
 .article {
-	margin-top: 0;
-	margin-bottom: 62px;
-	padding-left: 32px;
+	margin: 0;
 }
 
 .article-link {
@@ -375,18 +409,32 @@ li {
 .subscription {
 	background-image: url("../images/background-subscription.jpg");
 	width: 570px;
-	height: 220px;
-	border-radius: 16px;
+	border-radius: 16px;	
+	padding: 6px;
+	box-sizing: border-box;
 }
+
+.subscription-white-background {
+	background-color: #FCFCFC;
+	border-radius: 16px;
+	padding: 26px;
+	box-sizing: border-box;
+}
+
 .subscription-description {
 	margin-top: 0;
 	margin-bottom: 42px;
-  padding: 26px 26px 0 26px;
-    
 }
 
 .subscription-form {
-	margin: 0 24px 26px 26px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.subscription-email {
+	flex-grow: 1;
+	margin: 0;
+	margin-right: 24px;
 }
 
 .subscription-button, .button-delivery-form, .button-feedback {
@@ -394,9 +442,13 @@ li {
 	background-color: #FF2F64;
 }
 
+.delivery-background {
+	padding: 64px 64px 64px 100px;
+  box-sizing: border-box;
+}
+
 .delivery {
 	width: 400px;
-	padding-left: 100px;
 }
 
 .delivery-order {
@@ -404,6 +456,7 @@ li {
 	background-color: #FCFCFC;
 	border-radius: 16px;
 	padding: 40px;
+	box-sizing: border-box;
 }
 
 .delivery-title {
@@ -411,22 +464,41 @@ li {
 	font-size: 32px;
 	line-height: 46px;
 	color: #2D3440;
-	margin-top:167px;
+	margin-top: 103px;
 	margin-bottom: 24px;	
 }
 
 .delivery-description {
 	margin: 0;
+	width: 371px;
 }
 .delivery-text {
 	margin: 0;
 	margin-bottom: 32px;
 }
 
+.delivery-form {
+	display: grid;
+  grid-template-columns: 117px 287px;
+  gap: 20px 16px;
+}
+
+.delivery-form-address {
+	grid-column: 1/-1;
+}
+.button-delivery-form {
+	grid-column: 1/-1;
+  justify-self: center;		
+}
+.delivery-form-day, .delivery-form-tel, .delivery-form-address {
+	display: flex;
+	flex-direction: column;
+}
 .form-label {
 	font-weight: 700;
 	line-height: 20px;
 	color: #2D3440;
+	margin-bottom: 8px;
 }
 
 .delivery-background {
@@ -442,6 +514,8 @@ li {
 	background-image: url("../images/background-address.jpg");
 	height: 492px;
 	border-radius: 16px;
+	padding: 64px;
+  box-sizing: border-box;
 }
 
 .contacts-address {
@@ -451,15 +525,22 @@ li {
 	width: 343px;
 	margin: 0px;
 	padding: 40px;
+	box-sizing: border-box;
 }
 
-.contacts-address p {
+.contacts-address-office {
 	margin: 0;
 	margin-bottom: 12px;
 }
 
-.contacts-address p:nth-child(3) {
+.contacts-address-tel {
 	margin-top: 24px;
+	margin-bottom: 12px;
+}
+
+.contacts-address-time {
+	margin-top: 0;
+	margin-bottom: 32px;
 }
 
 .contacts-address b {
@@ -505,6 +586,7 @@ li {
 	padding: 0;
 	display: grid;
   grid-template-columns: repeat(2, auto);
+  gap: 8px 0;
 }
 
 .additional-info-link {
@@ -603,12 +685,7 @@ li {
 	padding-top: 48px;
 
 }
-.product-list {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0;
-  padding: 0;
-}
+
 
 .wrapper {
 	display: flex;
