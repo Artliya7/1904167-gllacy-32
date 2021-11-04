@@ -1318,7 +1318,7 @@ a {
 
 .pagination-disabled svg{
 	position: absolute;
-	top: 0;
+	top: 4;
 	left: 0;
 	right: 0;
 	margin: auto;
