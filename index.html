@@ -34,12 +34,42 @@
               Поиск
               </span>
             </a>
+            <div class="popover popover-search">
+              <div class="popover-content">
+                <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+                  <p class="field-group">
+                    <label class="visually-hidden" for="search">Поиск</label>
+                    <input class="search-form-field field" type="text" id="search" name="search" placeholder="Поиск по сайту">
+                  </p>
+                </form>
+              </div>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link navigation-link-login" href="#">
               <svg class="navigation-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.2.87c0-.36.3-.66.68-.66h3a2.17 2.17 0 0 1 2.16 2.17v10.5a2.17 2.17 0 0 1-2.16 2.16h-3a.67.67 0 0 1 0-1.33h3a.83.83 0 0 0 .83-.84V2.38a.83.83 0 0 0-.84-.83h-3a.67.67 0 0 1-.66-.67ZM5.66 3.4a.67.67 0 0 1 .95 0l3.74 3.75a.66.66 0 0 1 0 .95L6.6 11.85a.67.67 0 1 1-.95-.95l2.62-2.6H.87a.67.67 0 0 1 0-1.34h7.4L5.65 4.35a.67.67 0 0 1 0-.95Z" fill="#2D3440"/></svg>
               Вход
             </a>
+            <div class="popover popover-auth">
+              <div class="popover-content">
+                <h2 class="popover-title">Личный кабинет</h2>
+                <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+                  <p class="field-group">
+                    <label class="visually-hidden" for="auth-email">email@example.com</label>
+                    <input class="auth-form-field field" type="email" id="auth-email" name="auth-email" placeholder="email@example.com">
+                  </p>
+                  <p class="field-group">
+                    <label class="visually-hidden" for="auth-password">Пароль</label>
+                    <input class="auth-form-field field" type="password" id="auth-password" name="auth-password" placeholder="......">
+                  </p>
+                  <p class="field-group auth-form-user-options">
+                    <button class="button auth-form-button" type="submit">Войти</button>
+                    <a class="auth-form-recovery" href="#">Забыли пароль?</a>
+                    <a class="auth-form-register" href="#">Регистрация</a>
+                  </p>
+                </form>
+              </div>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link navigation-link-cart" href="#">
@@ -48,6 +78,11 @@
               Корзина
               </span> Пусто
             </a>
+            <div class="popover popover-cart-empty">
+              <div class="popover-content">
+                <h2 class="popover-title">Ваша корзина пока пуста</h2>
+              </div>
+            </div>
           </li>
         </ul>
 
@@ -201,7 +236,7 @@
           </li>
           <li class="product-card">
             <a class="product-card-image-link" href="#">
-              <img class="product-card-image" src="images/products/product-4.png" width="168" height="168" alt="Вкус моороженого Бабл-гам">
+              <img class="product-card-image" src="images/products/product-4.png" width="168" height="168" alt="Вкус мороженого Бабл-гам">
             </a>
             <a class="product-card-title-link" href="">
               <h4 class="product-card-title">Бабл-гам</h4>
@@ -389,6 +424,32 @@
       </section>
       </div>
     </footer>
+    <div class="modal-container-close">
+      <div class="modal modal-feedback">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+          <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group">
+              <label class="visually-hidden" for="feedback-name">Имя и фамилия</label>
+              <input class="feedback-form-field field" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
+            </p>
+            <p class="field-group">
+              <label class="visually-hidden" for="feedback-email">Email</label>
+              <input class="auth-form-field field" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
+            </p>
+            <p class="field-group">
+              <label class="visually-hidden" for="feedback-comments">Комментарии</label>
+              <input class="feedback-form-field field" type="text" id="feedback-comments" name="feedback-comments" placeholder="В свободной форме">
+            </p>
+            <button class="button feedback-form-button" type="submit">Отправить</button>
+          </form>
+        </section>
 
+      </div>
+
+    </div>
   </body>
 </html>
