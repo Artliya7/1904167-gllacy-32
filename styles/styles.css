@@ -25,7 +25,10 @@
 html {
 	height: 100%;
 }
-
+/* class "page-pink" относиться к 1-му слайду
+	 class "page-blue" относиться ко 2-му слайду
+	 class "page-yellow" относиться к 3-му слайду
+*/
 body {
 	margin: 0;
 	display: flex;
@@ -35,7 +38,18 @@ body {
 	font-size: 16px;
 	line-height: 22px;
 	color: #565C66;
+}
+
+.page-pink {
 	background-color: #FEAFC3;
+}
+
+.page-blue {
+	background-color: #69A9FF;
+}
+
+.page-yellow {
+	background-color: #FCC850;
 }
 
 .visually-hidden {
@@ -162,6 +176,7 @@ a {
 	margin-top: 34px;
 	display: flex;
 	flex-wrap: wrap;
+	max-width: 500px;
 }
 
 .navigation-link {
@@ -214,7 +229,7 @@ a {
 
 .navigation-user {
 	font-size: 14px;
-	max-width: 500px;
+	max-width: 550px;
 	margin-left: auto;
 	align-items: center;
 }
@@ -268,11 +283,16 @@ a {
 }
 
 .subcatalog {
+	position: absolute;
+	z-index: 1;
+  width: 138px;
+  box-sizing: border-box;
 	background: #FCFCFC;
 	border-radius: 4px;
 	margin-top: 8px;
 	padding: 16px;
 	box-shadow: 0px 8px 16px rgb(45 52 64 / 12%);
+	/*display: none;*/
 }
 
 .subcatalog-item:first-child {
@@ -286,6 +306,14 @@ a {
 
 .subcatalog-item:last-child {
 	margin-bottom: 0;
+}
+
+.subcatalog-item:hover {
+	background-color: #FFCBD8;
+}
+
+.subcatalog-item:active {
+	background-color:  #FF7799;
 }
 
 .subcatalog-link {
@@ -843,8 +871,8 @@ a {
 }
 
 .field:focus {
-	outline: 2px solid #2D3440;
-  border: 2px solid #FFFFFF;
+	outline: 1px solid #2D3440;
+  border: 1px solid #2D3440;
 }
 
 .field:disabled {
@@ -1212,6 +1240,10 @@ a {
   margin: 0;
   margin-bottom: 16px;
 }
+.textarea {
+	resize: none;
+  height: 149px;
+}
 
 .main-inner {
 	padding-top: 32px;
@@ -1232,7 +1264,7 @@ a {
 .popover {
 	position: absolute;
 	top: 40px;
-	right: 0;
+	right: 16px;
 	z-index: 1;
 	width: 200px;
 	padding: 48px;
@@ -1263,6 +1295,7 @@ a {
 
 .search-form-field {
 	cursor: auto;
+	padding-right: 36px;
 }
 
 .search-form-field::before {
@@ -1275,7 +1308,6 @@ a {
 .popover-auth {
 	width: 420px;
 	box-shadow: 0px 15px 40px rgb(45 52 64 / 12%);
-	
 }
 
 .auth-form .field-group {
@@ -1307,11 +1339,13 @@ a {
 
 .popover-cart {
   width: 441px;
+  right: 16px;
 }
 
 .popover-cart-empty {
 	width: 288px;
 	min-height: 156px;
+	right: 16px;
 	box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
 	display: none;
 }

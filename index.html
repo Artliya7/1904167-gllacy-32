@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body>
+  <body class="page-pink">
     <header class="main-header">
       <nav class="navigation">
         <img class="logo" src="images/logo-gllacy.svg" width="137" height="56" alt="Логотип Магазина Глэйси"> 
@@ -64,11 +64,11 @@
                 <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
                   <p class="field-group">
                     <label class="visually-hidden" for="auth-email">email@example.com</label>
-                    <input class="auth-form-field field" type="email" id="auth-email" name="auth-email" placeholder="email@example.com" required>
+                    <input class="auth-form-field field" type="email" id="auth-email" name="auth-email" value="email@example.com" required>
                   </p>
                   <p class="field-group">
                     <label class="visually-hidden" for="auth-password">Пароль</label>
-                    <input class="auth-form-field field" type="password" id="auth-password" name="auth-password" placeholder="......">
+                    <input class="auth-form-field field" type="password" id="auth-password" name="auth-password" value="password">
                   </p>
                   <p class="field-group auth-form-user-options">
                     <button class="button-red auth-form-button" type="submit">Войти</button>
@@ -452,7 +452,7 @@
             </p>
             <p class="field-group">
               <label class="visually-hidden" for="feedback-comments">Комментарии</label>
-              <input class="feedback-form-field field" type="text" id="feedback-comments" name="feedback-comments" placeholder="В свободной форме">
+              <textarea class="feedback-form-field field textarea" type="text" id="feedback-comments" name="feedback-comments" placeholder="В свободной форме"></textarea>
             </p>
             <button class="button-red feedback-form-button" type="submit">Отправить</button>
           </form>
