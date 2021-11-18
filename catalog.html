@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="page-pink">
@@ -73,7 +74,6 @@
                       <img class="cart-item-img" src="images/products/product-1.png" width="46" height="46" alt="Малиновый вкус мороженого">
                       <p class="cart-item-title">Малинка
                       <p class="cart-item-text">1 кг х 310 ₽</p>
-                      </p>
                       <p class="cart-item-price">310 ₽</p>
                       <button type="button" class="cart-item-button button">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,7 +86,6 @@
                       <img class="cart-item-img" src="images/products/product-4.png" width="46" height="46" alt="Вкус мороженого Бабл-гам">
                       <p class="cart-item-title">Бабл-гам
                       <p class="cart-item-text">1,5 кг х 320 ₽</p>
-                      </p>
                       <p class="cart-item-price">480 ₽</p>
                       <button class="cart-item-button button">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,22 +137,22 @@
               </div>
       			</fieldset>
       			<fieldset class="catalog-filter-group">
-      				<legend class="catalog-filter-title">Цена: <div class="range-wrapper-inputs">
+      				<div class="catalog-filter-title">Цена: <div class="range-wrapper-inputs">
                 <label class="catalog-filter-label">
                   <input class="range-input" type="number" value="100" name="min-price">₽
                 </label>
                 <label class="catalog-filter-label">–
                  <input class="range-input" type="number" value="500" name="max-price" style="width: 37px">₽
                 </label>
-              </div></legend>
+              </div></div>
               
               <div class="range">
                 <div class="range-scale">
                   <div class="range-bar" style="left: 52px; width:56px">
-                    <button class="range-toggle toggle-min">
+                    <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
-                    <button class="range-toggle toggle-max">
+                    <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </button>
                   </div>
