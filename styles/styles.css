@@ -38,7 +38,7 @@ body {
   font-family: inter, arial;
   font-size: 16px;
   line-height: 22px;
-  color: #565C66;
+  color: #565c66;
 }
 
 .page-pink {
@@ -62,11 +62,6 @@ body {
   border: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-}
-
-img {
-  max-width: 100%;
-  object-fit: contain;
 }
 
 .button {
@@ -142,15 +137,19 @@ img {
 
 .button-red:disabled {
   background: #b9b9b9;
+  color: #565c66;
   outline: 4px solid rgba(185, 185, 185, 0.3);
-}
-
-.button-red:disabled:hover {
-  background: #b9b9b9;
-  outline: 4px solid rgba(185, 185, 185, 0.3);
-  color: #565C66;
   cursor: default;
 }
+
+.spinner {
+  background-image: url("../images//icons/icon-spinner.svg");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding-right: 56px;
+}
+
 
 .main-header {
   color: #2d3440;
@@ -193,16 +192,8 @@ a {
   color: #2d3440;
   text-align: center;
   padding: 8px 16px;
+  border: 2px solid transparent;
 }
-
-
-/*.navigation-link:visited {
-  background-color: #ff4a78;
-  color: rgba(252, 252, 252, 1);
-  border-radius: 26px;
-  outline: none;
-  box-sizing: border-box;
-}*/
 
 
 .navigation-link:hover {
@@ -211,7 +202,7 @@ a {
 }
 
 .navigation-link:active {
-  color: rgba(45, 52, 64, 1);
+  color: #2d3440;
   background-color: #fcfcfc;
   border-radius: 26px;
 }
@@ -241,7 +232,8 @@ a {
   align-items: center;
 }
 
-.navigation-link-login, .navigation-link-cart {
+.navigation-link-login,
+.navigation-link-cart {
   padding-left: 40px;
   background-color: rgba(252, 252, 252, 0.3);
   color: #2d3440;
@@ -280,10 +272,16 @@ a {
   color: #fcfcfc;
   background-color: #ff4a78;
   border-radius: 26px;
+  border: 2px solid #ff4a78;
 }
 
 .navigation-link-current:hover {
   color: #2d3440;
+  border: 2px rgba(252, 252, 252, 0.5);
+}
+
+.navigation-link-current:active {
+  border: 2px solid #fcfcfc;
 }
 
 .navigation-link-current:focus {
@@ -439,7 +437,7 @@ a {
 }
 
 .slider-button svg path {
-  fill: rgba(252, 252, 252, 1);
+  fill:  #fcfcfc;
 }
 
 .slider-button:hover {
@@ -698,7 +696,7 @@ a {
 
 
 .product-card-description {
-  color: #565C66;
+  color: #565c66;
   margin: 0;
   margin-bottom: 20px;
 }
@@ -747,13 +745,14 @@ a {
   outline: none;
 }
 
-.product-card-button:disabled {
-  background: #b9b9b9;
-}
-
-.product-card-button:disabled:hover {
+/*класс disabled для ссылок с классом button*/
+.disabled {
   background: #b9b9b9;
   cursor: default;
+}
+
+.product-card-button .disabled svg path {
+  fill: #565c66;
 }
 
 .advantages {
@@ -812,7 +811,7 @@ a {
 }
 
 .news-link {
-  color: #565C66;
+  color: #565c66;
   text-decoration: none;
   display: block;
   margin-bottom: 12px;
@@ -996,7 +995,7 @@ a {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 162px;
-    color:  #565C66;
+    color:  #565c66;
     font-size: 12px;
     line-height: 16px;
     font-weight: 400;
@@ -1567,7 +1566,7 @@ a {
 
 .select-control:focus {
   background-color: rgba(252, 252, 252, 0.4);
-  outline: 2px solid rgba(252, 252, 252, 1);
+  outline: 2px solid  #fcfcfc;
 }
 
 .range {
@@ -1597,8 +1596,8 @@ a {
   position: absolute;
   width: 16px;
   height: 16px;
-  background: rgba(252, 252, 252, 1);
-  border: 6px solid rgba(45, 52, 64, 1);
+  background:  #fcfcfc;
+  border: 6px solid #2d3440;
   border-radius: 50%;
   padding: 0;
   box-sizing: border-box;
@@ -1606,16 +1605,16 @@ a {
 }
 
 .range-toggle:hover {
-  background-color: rgba(45, 52, 64, 1);
-  border: 6px solid rgba(252, 252, 252, 1);
+  background-color: #2d3440;
+  border: 6px solid  #fcfcfc;
 }
 
 .range-toggle:active {
   background: #2d3440;
 }
 .range-toggle:focus {
-  background-color: rgba(45, 52, 64, 1);
-  border: 6px solid rgba(252, 252, 252, 1);
+  background-color: #2d3440;
+  border: 6px solid  #fcfcfc;
   outline: 2px solid #2d3440;
 }
 
@@ -1676,24 +1675,16 @@ a {
 }
 
 .control:hover .control-mark svg path {
-  fill: rgba(252, 252, 252, 1);
+  fill:  #fcfcfc;
 }
 
+.control-input[type="radio"]:hover + .control-mark::before {
+  background-color: #fcfcfc;
+}
 
 .control-input:disabled + .control-mark svg path {
  fill: rgba(45, 52, 64, 0.4);
 }
-
-/*.control-input[type="checkbox"]:checked + .control-mark::before {
-  position: absolute;
-  top: 0;
-  left: 0
-  width: 16px;
-  height: 16px;
-  background-image: url("../images/icons/icon-checkbox-off.svg");
-  background-repeat: no-repeat;
-  content: "";
-}*/
 
 .control-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
@@ -1734,11 +1725,6 @@ a {
 }
 
 .catalog-button:disabled {
-  opacity: 0.4;
-  border: 2px solid #fcfcfc;
-}
-
-.catalog-button:disabled:hover {
   opacity: 0.4;
   border: 2px solid #fcfcfc;
   cursor: default;
