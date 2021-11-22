@@ -68,6 +68,7 @@ body {
   font-family: inherit;
   font-weight: 700;
   line-height: 20px;
+  color: #2d3440;
   text-align: center;
   text-decoration: none;
   padding: 12px 32px;
@@ -142,12 +143,29 @@ body {
   cursor: default;
 }
 
+/*доп.класс disabled для ссылок с классом button*/
+
+.disabled {
+  background: #e7e7e7;
+  color: #b9b9b9;
+  cursor: default;
+}
+
+.disabled-red {
+  background: #b9b9b9;
+  cursor: default;
+  color: #565c66;
+  outline: 4px solid rgba(185, 185, 185, 0.3);
+}
+
+/*spinner добавляется классом spinner для кнопки*/
+
 .spinner {
+  padding-right: 56px;
   background-image: url("../images//icons/icon-spinner.svg");
   background-size: 16px 16px;
   background-repeat: no-repeat;
-  background-position: center right;
-  padding-right: 56px;
+  background-position: center right 32px;
 }
 
 
@@ -193,6 +211,7 @@ a {
   text-align: center;
   padding: 8px 16px;
   border: 2px solid transparent;
+  word-spacing: -4px;
 }
 
 
@@ -300,29 +319,30 @@ a {
   background: #fcfcfc;
   border-radius: 4px;
   margin-top: 8px;
-  padding: 16px;
+  padding: 0;
   box-shadow: 0px 8px 16px rgb(45 52 64 / 12%);
   display: none;
 }
 
-.subcatalog-item:first-child {
-  padding-bottom: 12px;
-  border-bottom: 1px solid #b9b9b9;
+.subcatalog-title {
+  display: block;
+  padding: 16px 16px 12px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d3440;
+   border-bottom: 1px solid #b9b9b9;
 }
 
-.subcatalog-item {
-  margin-bottom: 12px;
-}
 
 .subcatalog-item:last-child {
-  margin-bottom: 0;
+  margin-bottom: 14px;
 }
 
-.subcatalog-item:hover {
+.subcatalog-link:hover {
   background-color: #ffcbd8;
 }
 
-.subcatalog-item:active {
+.subcatalog-link:active {
   background-color:  #ff7799;
 }
 
@@ -330,6 +350,8 @@ a {
   color: #2d3440;
   font-size: 14px;
   line-height: 20px;
+  display: block;
+  padding: 8px 16px;
 }
 
 .navigation-item {
@@ -353,7 +375,7 @@ a {
 .first-page-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 126px;
+  margin-bottom: 20px;
 }
 
 .description {
@@ -546,7 +568,6 @@ a {
 .social-media-link:hover {
   background-color: #2d3440;
   border-radius: 50%;
-  outline: 2px solid rgba(252, 252, 252, 0,2);
 }
 
 .social-media-link:focus {
@@ -637,12 +658,12 @@ a {
   width: 322px;
   margin: 0;
   margin-bottom: 32px;
+  word-spacing: -1px;
 }
 
 
 .button-order,
 .button-gift {
-  color: #2d3440;
   max-width: 200px;
 }
 
@@ -745,14 +766,17 @@ a {
   outline: none;
 }
 
-/*класс disabled для ссылок с классом button*/
-.disabled {
-  background: #b9b9b9;
-  cursor: default;
+.product-card-button:focus svg path {
+  fill: #fcfcfc;
 }
 
-.product-card-button .disabled svg path {
-  fill: #565c66;
+.product-card-button.disabled {
+  background: #b9b9b9;
+  border: none;
+}
+
+.product-card-button.disabled svg path {
+  fill: #565C66;
 }
 
 .advantages {
@@ -1084,7 +1108,7 @@ a {
   display: flex;
   width: 1170px;
   margin: 0 auto;
-  padding-top: 48px;
+  padding-top: 44px;
 }
 
 .footer-social-media {
@@ -1254,7 +1278,7 @@ a {
 }
 
 .main-inner {
-  padding-top: 32px;
+  padding-top: 56px;
 }
 .page-container {
   flex-grow: 1;
@@ -1267,6 +1291,8 @@ a {
   font-size: 32px;
   line-height: 46px;
   color: #2d3440;
+  margin-top: 15px;
+  margin-bottom: 40px;
 }
 
 .popover {
@@ -1504,11 +1530,6 @@ a {
   content: none;
 }
 
-.inner-header-title {
-  margin: 0;
-  margin-bottom: 40px;
-}
-
 .catalog-filter {
   width: 900px;
   display: flex;
@@ -1535,7 +1556,7 @@ a {
   margin: 0;
   padding: 0;
   background: rgba(252, 252, 252, 0.3);
-  padding: 10px 0 10px 16px;
+  padding: 8px 0 8px 16px;
   border-radius: 20px;
 }
 
@@ -1717,22 +1738,24 @@ a {
 
 .catalog-button:hover {
   background: #fcfcfc;
+  outline: 2px solid rgba(252, 252, 252, 0.3);
 }
 
 .catalog-button:focus {
-  border: 2px solid #2d3440;
-  outline: none;
+  outline: 2px solid #2d3440;
 }
 
 .catalog-button:disabled {
   opacity: 0.4;
-  border: 2px solid #fcfcfc;
+  outline: 2px solid #fcfcfc;
+  background: rgba(252, 252, 252, 0.3);
+  color: #2d3440;;
   cursor: default;
 }
 
 .catalog-products {
-  padding-top: 48px;
-  padding-bottom: 40px;
+  padding-top: 34px;
+  padding-bottom: 30px;
 }
 
 
@@ -1746,6 +1769,7 @@ a {
 .pagination-show-more {
   margin-left: 43%;
   max-width: 200px;
+  font-size: 16px;
 }
 
 .pagination {
@@ -1761,7 +1785,6 @@ a {
   text-decoration: none;
   min-width: 24px;
   min-height: 24px;
-  padding: 2px 8px;
   display: flex;
   justify-content: center;
   border: 1px solid transparent;
@@ -1770,6 +1793,11 @@ a {
 .pagination-link:hover {
   background: rgba(252, 252, 252, 0.3);
   border: 1px solid #fcfcfc;
+  border-radius: 50px;
+}
+
+.pagination-link:active {
+  background-color: #fcfcfc;
   border-radius: 50px;
 }
 
@@ -1797,7 +1825,7 @@ a {
   border-radius: 50px;
 }
 
-.pagination-disabled svg{
+.pagination-disabled svg {
   position: absolute;
   top: 4;
   left: 0;
@@ -1812,11 +1840,9 @@ a {
   width: 1170px;
   margin: 0 auto;
   padding-top: 48px;
-}
-
-.page-footer-container {
   position: relative;
 }
+
 .page-footer-container::before {
   position: absolute;
   content: "";
