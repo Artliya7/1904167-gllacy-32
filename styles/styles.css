@@ -113,6 +113,8 @@ body {
   text-align: center;
   text-decoration: none;
   padding: 12px 32px;
+  max-width: 250px;
+  min-width: 152px;
   cursor: pointer;
   border: none;
   color: #fcfcfc;
@@ -207,11 +209,11 @@ a {
   position: relative;
   display: block;
   text-decoration: none;
+  max-width: 180px;
   color: #2d3440;
   text-align: center;
   padding: 8px 16px;
   border: 2px solid transparent;
-  word-spacing: -4px;
 }
 
 
@@ -291,12 +293,10 @@ a {
   color: #fcfcfc;
   background-color: #ff4a78;
   border-radius: 26px;
-  border: 2px solid #ff4a78;
 }
 
 .navigation-link-current:hover {
   color: #2d3440;
-  border: 2px rgba(252, 252, 252, 0.5);
 }
 
 .navigation-link-current:active {
@@ -330,7 +330,7 @@ a {
   font-size: 14px;
   font-weight: 700;
   color: #2d3440;
-   border-bottom: 1px solid #b9b9b9;
+  border-bottom: 1px solid #b9b9b9;
 }
 
 
@@ -592,7 +592,9 @@ a {
   margin-bottom: 80px;
 }
 
-.bonuses-title, .flavours-title, .advantages-title {
+.bonuses-title,
+.flavours-title,
+.advantages-title {
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
@@ -790,6 +792,7 @@ a {
 
 .advantages-white-background {
   background: #fcfcfc;
+  min-height: 432px;
   border-radius: 16px;
   padding: 56px 40px;
   box-sizing: border-box;
@@ -826,9 +829,11 @@ a {
 
 .news {
   background-image: url("../images/background-article.jpg");
+  background-color: #ffffff;
   background-repeat: no-repeat;
   width: 570px;
-  min-height: 220px;
+  height: 220px;
+  overflow: auto;
   border-radius: 16px;
   padding: 32px 235px 63px 32px;
   box-sizing: border-box;
@@ -857,7 +862,8 @@ a {
   background-image: url("../images/background-subscription.jpg");
   background-repeat: no-repeat;
   width: 570px;
-  min-height: 220px;
+  height: 220px;
+  overflow: auto;
   border-radius: 16px;
   padding: 6px;
   box-sizing: border-box;
@@ -980,7 +986,9 @@ a {
   margin-top: 12px;
 }
 
-.delivery-form-day, .delivery-form-tel, .delivery-form-address {
+.delivery-form-day,
+.delivery-form-tel,
+.delivery-form-address {
   display: flex;
   flex-direction: column;
 }
@@ -1053,9 +1061,11 @@ a {
 
 .delivery-background {
   background-image: url("../images/background-delivery.jpg");
+  background-color: #e7e7e7;
   background-repeat: no-repeat;
   width: 1170px;
-  min-height: 534px;
+  height: 534px;
+  overflow: auto;
   border-radius: 16px;
   display: flex;
   justify-content: space-between;
@@ -1065,8 +1075,10 @@ a {
 }
 .contacts {
   background-image: url("../images/background-address.jpg");
+  background-color: #ffffff;
   background-repeat: no-repeat;
-  min-height: 492px;
+  height: 492px;
+  overflow: auto;
   border-radius: 16px;
   padding: 64px;
   box-sizing: border-box;
@@ -1555,6 +1567,7 @@ a {
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  max-width: 600px;
   background: rgba(252, 252, 252, 0.3);
   padding: 8px 0 8px 16px;
   border-radius: 20px;
@@ -1562,6 +1575,8 @@ a {
 
 .catalog-filter-title {
   display: flex;
+  max-width: 140px;
+  overflow: auto;
   margin-bottom: 8px;
   padding-left: 16px;
 }
@@ -1591,6 +1606,7 @@ a {
 }
 
 .range {
+  max-width: 200px;
   height: 36px;
   background: rgba(252, 252, 252, 0.3);
   border-radius: 20px;
@@ -1724,6 +1740,7 @@ a {
 }
 
 .catalog-button {
+  max-width: 190px;
   padding: 8px 53px;
   font-weight: 700;
   font-size: 14px;
